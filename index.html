@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=0.2">
+    <title></title> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="scanlines.css">
+    <link href="css/nes.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css"> 
+    <script src="script.js"></script>
+</head> 
+<body>
+    <div class="scanlines"></div>
+    <video autoplay loop muted playsinline id="bg-video">
+        <source src="images/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio id="musicbg" loop>
+        <source src="audio/musicbg.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <div id="transition-fade"></div>
+
+    
+
+<div class="ascii">    
+<pre class="glow disappear">
+                       +----+    +--------=     +=----=+      =----     =-------=    =---------=                     
+                      +-----+    =----------+  ---------=    +-----=    *---------=  #=---------+                    
+                     =======+    ====###====+ ====+##+====   ========  +#====##+====+#*===+######                    
+                    =+++*++++   ++++++==++++#+++++# ######   =+++*++++  #*++++###+++++#++++======+                   
+                   ++++#*++++   +++++++++++##++++*           ++++#+++++ ##+++++###++++##+++++++++++                  
+                 +*##+++=###+  +###*#*###*## +***+          +***+*#****+ #+***+  #****+##****######*                 
+                +*##########+  +###*######+  +####+   *###+ *##########*+##*###=  *###*##*###*####%#                 
+               +############*  *###*##*####+ +#####**####*++*###########*##*##########* ##*##########*               
+              +#####%%%%##### +##### +#####* *############*+#####%%%%*###*############* +#############+              
+             *####%#####*#### *#####  #*####++############ *###*##########+#*##########  ##*###########+             
+             #%%%#%     #%%%% #%%%#   ##%%%%#  #%%%%%%%%%# #%%%#     #%%%%##%%%%%%%%%%#   ##%%%%%%%%%%%#             
+             #####      ##### #####    ######   ##%%%%##   #####     *###############     ##############</pre>
+</div>
+    <!-- <p class="glow">Choose a game to play:</p>  -->
+    <div id="menu"> 
+        <button id="start-btnjs" class="start-btn glow blink_me">START</button>
+        <button onclick="playaudio()" class="sprite-btn audio-y-btn"></button>
+        <!-- <button class="nes-btn" onclick="location.href='rock-paper-scissors.html'">Play Rock, Paper, Scissors</button> 
+        <button class="nes-btn" onclick="location.href='type-racer.html'">Play Type Racer</button>  -->
+    </div> 
+</body> 
+</html> 

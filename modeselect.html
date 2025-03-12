@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=0.2">
+    <title></title> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style-modeselect.css"> 
+    <link rel="stylesheet" href="scanlines.css">
+    <link href="css/nes.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css"> 
+    <script src="script.js"></script>
+</head> 
+<body>
+    <div class="scanlines"></div>
+    <video autoplay loop muted playsinline id="bg-video">
+        <source src="images/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="gamemodes">
+        <div class="storymode">
+            <button class="glow expand btn">STORY</button>
+            <p class="glow desc">Experience the story.</p>
+        </div>
+        <div class="arcademode">
+            <button class="glow expand btn">ARCADE</button>
+            <p class="glow desc">Jump straight into the action.</p>
+        </div>
+    </div>
+    <div id="transition-fade"></div>
+    <h1 id="menu-select" class="glow">SELECT GAME MODE</h1>
+
+
+</body> 
+</html> 

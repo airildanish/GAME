@@ -1,0 +1,35 @@
+#menu-select {
+    position: fixed;
+    top: 100px;
+}
+
+.gamemodes {
+    display: flex;
+    width: 80%;
+    height: 60vh;
+    transition: all 0.5s ease-in-out;
+}
+
+.storymode, .arcademode {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    flex-direction: column;
+}
+
+.desc {
+    color: white;
+    font-size: 20px;
+}
+
+.btn {
+    border: none;
+    font-size: 46px;
+    background: transparent;
+}
+
+.btn:focus {
+    outline: none;
+}
