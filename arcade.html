@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=0.2">
+    <title></title> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style-modeselect.css"> 
+    <link rel="stylesheet" href="scanlines.css">
+    <link rel="stylesheet" href="parallax.css">
+    
+</head> 
+<body>
+    <div id="transition-fade-in"></div>
+
+    <div id="catmoves" class="cat1">
+        <img class="cat-img1" src="images/cat.png"/>
+    </div>
+
+    <div class="content">
+        <div class="paralax">
+            <div class="layer layer-four" data-image="images/parallax/1.png"></div>
+            <div class="layer layer-three" data-image="images/parallax/2.png"></div>
+            <div class="layer layer-two" data-image="images/parallax/3.png"></div>
+            <div class="layer layer-one" data-image="images/parallax/4.png"></div>
+        </div>
+    </div>
+
+    <div class="scanlines"></div>
+    <video autoplay loop muted playsinline id="bg-video">
+        <source src="images/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <div id="transition-fade"></div>
+    <h1 id="difficulty" class="menu-select glow">SELECT GAME MODE</h1>
+
+    <script src="script.js"></script>
+</body> 
+</html> 

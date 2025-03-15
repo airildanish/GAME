@@ -1,0 +1,83 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #C0B3A0;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.paralax {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url("/images/parallax/1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.paralax .layer {
+  position: absolute;
+  width: 400%;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.paralax .layer-one {
+  height: 100%;
+  bottom: 0;
+  background: repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 90s linear infinite;
+}
+
+.paralax .layer-two {
+  height: 100%;
+  bottom: 0%;
+  background: repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 180s linear infinite;
+}
+
+.paralax .layer-three {
+  height: 100%;
+  bottom: 0%;
+  background: repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 360s linear infinite;
+}
+
+.paralax .layer-four {
+  height: 100%;
+  bottom: 0%;
+  background: repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 720s linear infinite;
+}
+
+@keyframes slideshow {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.stationary {
+  animation: none !important;
+}/*# sourceMappingURL=parallax.css.map */

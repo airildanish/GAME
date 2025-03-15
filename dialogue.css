@@ -1,0 +1,55 @@
+.dialogue-box {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+    background-color: rgba(23, 40, 74, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: flex-start;
+    padding: 0px;
+}
+
+/* Dialogue Header */
+.dialogue-header-text {
+    font-size: 33px;
+    margin-left: 15vw;
+    margin-bottom: 0px;
+    color: white;
+    background-color: transparent;
+}
+
+/* Dialogue Content */
+#dialogue-content {
+    margin-left: 15vw;
+    line-height: 1.5;
+    font-size: 20px;
+    color: white;
+}
+
+/* Character Image */
+.character-container {
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute; 
+    left: 32px;
+    bottom: 32px;
+    z-index: 1;
+    image-rendering: pixelated;
+    overflow: hidden;
+}
+
+.character-img {
+    animation: characterWalk 1.2s steps(4) infinite;
+}
+
+@keyframes characterWalk {
+    from {
+        transform: translate3d(0px,0,0);
+    } 
+    to {
+        transform: translate3d(-50%,0,0);
+    }
+}

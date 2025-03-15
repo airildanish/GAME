@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <title>Rock, Paper, Scissors</title>
-        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
+        <title>Hubris</title> 
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="scanlines.css">
+        <link rel="stylesheet" href="parallax.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css"> 
+        <link rel="stylesheet" href="style-modeselect.css"> 
+        <link rel="stylesheet" href="fight.css" !important> 
+        <script src="script.js"></script>
     </head>
     <body>
-        <h1>Rock, Paper, Scissors</h1>
-        <div id="game">
-            <button class="choice" data-choice="rock">✊ Rock</button>
-            <button class="choice" data-choice="paper">✋ Paper</button>
-            <button class="choice" data-choice="scissors">✌️ Scissors</button>
+
+        <!-- <button id="attackBtn">Attack</button> -->
+        
+        <div id="player">
+            <img id="playerIdleJS" class="playerIdle" src="images/player/Idle.png"/>
+            <img id="playerAttackJS" class="playerAttack" src="images/player/Attack.png"/>
         </div>
-        <p id="result"></p>
-        <button onclick="location.href='index.html'">Return to Main Menu</button>
-        <script src="rock-paper-scissors.js"></script>
+
+        <div id="enemy">
+            <img id="playerIdleJS" class="enemyIdle" src="images/Undead executioner puppet/png/slime.png"/>
+            <img id="playerAttackJS" class="playerAttack" src="images/player/Attack.png"/>
+        </div>
+
+
+        <div class="cat">
+            <img class="cat-img" src="images/cat.png"/>
+        </div>
+        
+        <div id="transition-fade-in"></div>
+
+        <div class="content">
+            <div class="paralax">
+                <div class="layer layer-four" data-image="images/parallax2/1.png"></div>
+                <div class="layer layer-three" data-image="images/parallax2/2.png"></div>
+                <div class="layer layer-two" data-image="images/parallax2/3.png"></div>
+                <div class="layer layer-one stationary" data-image="images/parallax2/4.png"></div>
+            </div>
+        </div>
+
+        <div class="scanlines"></div>
+        <video autoplay loop muted playsinline id="bg-video">
+            <source src="images/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div  class=" rps-choice-container">
+            <input type="image" src="images/rps/rock.png" />
+            <input type="image" src="images/rps/paper.png" />
+            <input type="image" src="images/rps/scissors.png" />
+            <!-- <button onclick="storeValue('diff-key', 'Medium'), moveImageAgain()" class="diff-btn" data-text="Standard difficulty." style="background-color: #B7A102;">Medium</button>
+            <button onclick="storeValue('diff-key', 'Hard'), moveImageAgain()" class="diff-btn" data-text="For an extra challenge." style="background-color: #A82828;">Hard</button>
+            <button onclick="storeValue('diff-key', 'Nightmare'), moveImageAgain()" class="diff-btn" data-text="don't." style="background-color: #2A004E;">Nightmare</button> -->
+            <p id="difficultyText" class="outline"></p>
+        </div>
     </body>
 </html>

@@ -2,15 +2,24 @@
 <html lang="en"> 
 <head> 
     <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=0.2">
-    <title></title> 
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Hubris</title> 
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="scanlines.css">
-    <link href="css/nes.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="parallax.css">
     <link rel="stylesheet" href="css/font-awesome.min.css"> 
     <script src="script.js"></script>
 </head> 
 <body>
+    <div class="content">
+        <div class="paralax">
+            <div class="layer layer-four" data-image="images/parallax/1.png"></div>
+            <div class="layer layer-three" data-image="images/parallax/2.png"></div>
+            <div class="layer layer-two" data-image="images/parallax/3.png"></div>
+            <div class="layer layer-one" data-image="images/parallax/4.png"></div>
+        </div>
+    </div>
+    
     <div class="scanlines"></div>
     <video autoplay loop muted playsinline id="bg-video">
         <source src="images/background.mp4" type="video/mp4">
@@ -18,28 +27,32 @@
     </video>
 
     <audio id="musicbg" loop>
-        <source src="audio/musicbg.mp3" type="audio/mp3">
+        <source src="audio/musicbg.wav" type="audio/wav">
         Your browser does not support the audio tag.
     </audio>
 
     <div id="transition-fade"></div>
 
-    
+    <div class="cat">
+        <img class="cat-img" src="images/cat.png"/>
+    </div>
+
+
 
 <div class="ascii">    
 <pre class="glow disappear">
-                       +----+    +--------=     +=----=+      =----     =-------=    =---------=                     
-                      +-----+    =----------+  ---------=    +-----=    *---------=  #=---------+                    
-                     =======+    ====###====+ ====+##+====   ========  +#====##+====+#*===+######                    
-                    =+++*++++   ++++++==++++#+++++# ######   =+++*++++  #*++++###+++++#++++======+                   
-                   ++++#*++++   +++++++++++##++++*           ++++#+++++ ##+++++###++++##+++++++++++                  
-                 +*##+++=###+  +###*#*###*## +***+          +***+*#****+ #+***+  #****+##****######*                 
-                +*##########+  +###*######+  +####+   *###+ *##########*+##*###=  *###*##*###*####%#                 
-               +############*  *###*##*####+ +#####**####*++*###########*##*##########* ##*##########*               
-              +#####%%%%##### +##### +#####* *############*+#####%%%%*###*############* +#############+              
-             *####%#####*#### *#####  #*####++############ *###*##########+#*##########  ##*###########+             
-             #%%%#%     #%%%% #%%%#   ##%%%%#  #%%%%%%%%%# #%%%#     #%%%%##%%%%%%%%%%#   ##%%%%%%%%%%%#             
-             #####      ##### #####    ######   ##%%%%##   #####     *###############     ##############</pre>
+                                                                        
+     ▄█    █▄    ███    █▄  ▀█████████▄     ▄████████  ▄█     ▄████████  
+    ███    ███   ███    ███   ███    ███   ███    ███ ███    ███    ███  
+    ███    ███   ███    ███   ███    ███   ███    ███ ███▌   ███    █▀   
+   ▄███▄▄▄▄███▄▄ ███    ███  ▄███▄▄▄██▀   ▄███▄▄▄▄██▀ ███▌   ███         
+  ▀▀███▀▀▀▀███▀  ███    ███ ▀▀███▀▀▀██▄  ▀▀███▀▀▀▀▀   ███▌ ▀███████████  
+    ███    ███   ███    ███   ███    ██▄ ▀███████████ ███           ███  
+    ███    ███   ███    ███   ███    ███   ███    ███ ███     ▄█    ███  
+    ███    █▀    ████████▀  ▄█████████▀    ███    ███ █▀    ▄████████▀   
+                                           ███    ███                    
+                                                                         
+</pre>
 </div>
     <!-- <p class="glow">Choose a game to play:</p>  -->
     <div id="menu"> 
@@ -48,5 +61,7 @@
         <!-- <button class="nes-btn" onclick="location.href='rock-paper-scissors.html'">Play Rock, Paper, Scissors</button> 
         <button class="nes-btn" onclick="location.href='type-racer.html'">Play Type Racer</button>  -->
     </div> 
+
+    <p id="ver" class="glow">V0.1 <br> Made by Airil</p>
 </body> 
 </html> 

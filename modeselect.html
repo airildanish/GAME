@@ -7,29 +7,53 @@
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="style-modeselect.css"> 
     <link rel="stylesheet" href="scanlines.css">
-    <link href="css/nes.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css"> 
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="parallax.css">
+    
 </head> 
 <body>
+    <div id="transition-fade-in"></div>
+
+    <div id="catmoves" class="cat1">
+        <img class="cat-img1" src="images/cat.png"/>
+    </div>
+
+    <div class="content">
+        <div class="paralax">
+            <div class="layer layer-four" data-image="images/parallax/1.png"></div>
+            <div class="layer layer-three" data-image="images/parallax/2.png"></div>
+            <div class="layer layer-two" data-image="images/parallax/3.png"></div>
+            <div class="layer layer-one" data-image="images/parallax/4.png"></div>
+        </div>
+    </div>
+
     <div class="scanlines"></div>
     <video autoplay loop muted playsinline id="bg-video">
         <source src="images/background.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <div class="gamemodes">
-        <div class="storymode">
-            <button class="glow expand btn">STORY</button>
-            <p class="glow desc">Experience the story.</p>
+
+    <div id="first" class="hideable gamemodes">
+        <div class="rpsmode">
+            <button id="rps-btn" onclick="storeValue('game-key', 'rps'), hideAndShow(), moveImage()" class="glow btn">ROCK PAPER SCISSORS</button>
+            <p class="glow desc">Test your luck!</p>
         </div>
-        <div class="arcademode">
-            <button class="glow expand btn">ARCADE</button>
-            <p class="glow desc">Jump straight into the action.</p>
+        <div class="typeracermode">
+            <button id="tr-btn" onclick="storeValue('game-key', 'tr'), hideAndShow(), moveImage()" class="glow btn">TYPE RACER</button>
+            <p class="glow desc">Test your typing skills!</p>
         </div>
     </div>
+
+    <div id="second" class="delayed-show difficulty-container">
+        <button onclick="storeValue('diff-key', 'Easy'), moveImageAgain()" class="diff-btn" data-text="For babies and newbies." style="background-color: #5EAA33">Easy</button>
+        <button onclick="storeValue('diff-key', 'Medium'), moveImageAgain()" class="diff-btn" data-text="Standard difficulty." style="background-color: #B7A102;">Medium</button>
+        <button onclick="storeValue('diff-key', 'Hard'), moveImageAgain()" class="diff-btn" data-text="For an extra challenge." style="background-color: #A82828;">Hard</button>
+        <button onclick="storeValue('diff-key', 'Nightmare'), moveImageAgain()" class="diff-btn" data-text="don't." style="background-color: #2A004E;">Nightmare</button>
+        <p id="difficultyText" class="outline"></p>
+    </div>
+
     <div id="transition-fade"></div>
-    <h1 id="menu-select" class="glow">SELECT GAME MODE</h1>
+    <h1 id="difficulty" class="menu-select glow">SELECT GAME MODE</h1>
 
-
+    <script src="script.js"></script>
 </body> 
 </html> 
